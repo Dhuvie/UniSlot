@@ -1,0 +1,30 @@
+{
+  "name": "unislot",
+  "version": "1.0.0",
+  "description": "A dynamic slot-based system for university students to connect and collaborate",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "keywords": ["university", "slots", "collaboration", "ride-sharing"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "firebase-admin": "^11.11.0",
+    "socket.io": "^4.7.2",
+    "jsonwebtoken": "^9.0.2",
+    "axios": "^1.5.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.1"
+  }
+}
