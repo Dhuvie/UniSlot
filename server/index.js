@@ -13,15 +13,19 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"]
+    origin: [
+      "http://localhost:3000",
+      "https://uni-slot.vercel.app"
+    ],
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
 
 app.use(cors({
   origin: [
-    'http://localhost:3000',
-    'https://uni-slot.vercel.app'
+    "http://localhost:3000",
+    "https://uni-slot.vercel.app"
   ],
   credentials: true
 }));
